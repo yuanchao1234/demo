@@ -1,0 +1,167 @@
+header {
+    width: 100%;
+    height: 132px;
+    background: #fff;
+    .nav {
+        width: 100%;
+        height: 132px;
+        margin: 0 auto;
+        h1 {
+            float: left;
+            padding: 0 30px;
+        }
+        ul {
+            width: 700px;
+            height: 132px;
+            float: left;
+            line-height: 132px;
+            // background-color: blue;
+            li {
+                float: left;
+                padding: 0 30px;
+            }
+            a {
+                color: rgb(94, 92, 91);
+                font-size: 16px;
+                font-weight: bolder;
+                transition: 0.5s;
+                &:hover {
+                    color: #f13a3a;
+                }
+            }
+        }
+        .search {
+            width: 132px;
+            height: 132px;
+            float: right;
+            // background-color: chartreuse;
+            h2 {
+                padding: 51px;
+            }
+        }
+    }
+}
+
+//主体内容
+main {
+    .image_bg {
+        div.g-img {
+            width: 100%;
+            height: 700px;
+            h2 {
+                font-size: 40px;
+                color: white;
+                padding-top: 260px;
+                text-align: center;
+                line-height: 100px;
+            }
+            p {
+                width: 700px;
+                color: white;
+                text-align: center;
+                padding-left: 400px;
+            }
+            .btn {
+                width: 260px;
+                height: 70px;
+                border: none;
+                background-color: rgb(255, 255, 255);
+                font-size: 20px;
+                font-weight: bolder;
+                margin-left: 630px;
+                margin-top: 50px;
+                a {
+                    color: rgb(7, 161, 167);
+                }
+            }
+        }
+        .g-img:nth-child(1) {
+            background: url(../images/theme_nature.jpg)center no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .g-img:nth-child(2) {
+            background: url(../images/theme_fimaly.jpg)center no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .g-img:nth-child(3) {
+            background: url(../images/theme_aerial.jpg)center no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    }
+}
+
+//底部内容
+footer {
+    width: 100%;
+    height: 400px;
+    // background-color: steelblue;
+    .footer_search {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        padding-top: 60px;
+        #search {
+            width: 100%;
+            height: 30px;
+            border: 1px solid rgb(170, 170, 170);
+            &::-webkit-input-placeholder {
+                padding-left: 10px;
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+        .search_image {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 5px;
+            top: 67px;
+            z-index: 5;
+            background-repeat: no-repeat;
+            /*设置图片不重复*/
+            background-position: 0px 0px;
+        }
+    }
+    .footer_center {
+        width: 80%;
+        margin: 0 auto;
+        // border-top: 1px solid rgb(221, 221, 221);
+        section {
+            h5 {
+                font-size: 18px;
+                padding: 25px 0 20px 0;
+                color: rgb(82, 82, 82);
+                font-weight: 500;
+            }
+            // a{
+            //     color: rgb(92, 92, 92);
+            //     font-size: 14px;
+            // }
+        }
+        .footer_one {
+            width: 100%;
+            a {
+                display: inline;
+                padding-right: 10px;
+                color: rgb(92, 92, 92);
+                font-size: 14px;
+            }
+        }
+        .footer_two {
+            width: 100%;
+            height: 75px;
+            // background-color: blue;
+            text-align: center;
+            line-height: 75px;
+            border-top: 1px solid rgb(221, 221, 221);
+            margin-top: 20px;
+            p {
+                font-size: 14px;
+                color: dimgrey;
+            }
+        }
+    }
+}

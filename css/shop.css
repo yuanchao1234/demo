@@ -1,0 +1,231 @@
+@charset "UTF-8";
+header {
+  width: 100%;
+  height: 132px;
+  background: #fff;
+}
+
+header .nav {
+  width: 100%;
+  height: 132px;
+  margin: 0 auto;
+}
+
+header .nav h1 {
+  float: left;
+  padding: 0 30px;
+}
+
+header .nav ul {
+  width: 700px;
+  height: 132px;
+  float: left;
+  line-height: 132px;
+}
+
+header .nav ul li {
+  float: left;
+  padding: 0 30px;
+}
+
+header .nav ul a {
+  color: #5e5c5b;
+  font-size: 16px;
+  font-weight: bolder;
+  transition: 0.5s;
+}
+
+header .nav ul a:hover {
+  color: #f13a3a;
+}
+
+header .nav .search {
+  width: 132px;
+  height: 132px;
+  float: right;
+}
+
+header .nav .search h2 {
+  padding: 51px;
+}
+
+main {
+  width: 100%;
+  height: 900px;
+}
+
+main .nav {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+main .nav h3 {
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+  width: 80px;
+  height: 30px;
+  background-color: #e9e9e9;
+  display: block;
+  float: left;
+}
+
+main .nav ul {
+  width: 500px;
+  height: 30px;
+}
+
+main .nav ul li {
+  height: 30px;
+  float: left;
+  padding: 0 20px;
+  line-height: 28px;
+}
+
+main .nav ul li a {
+  font-size: 12px;
+}
+
+main .list {
+  width: 80%;
+  margin: 0 auto;
+  background-color: indigo;
+}
+
+main .list figure {
+  width: 25%;
+  height: 400px;
+  float: left;
+}
+
+main .list figure img {
+  width: 280px;
+  height: 280px;
+  padding: 10px;
+}
+
+main .list figure figcaption h4 {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+main .list figure figcaption p {
+  font-size: 14px;
+  line-height: 30px;
+  color: red;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+main .list figure figcaption .btn {
+  position: relative;
+  width: 100px;
+  height: 38px;
+  padding: 10px;
+  color: #fff;
+  background-color: #7c7978;
+  cursor: pointer;
+  border: none;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+main .list figure figcaption .btn:after, main .list figure figcaption .btn:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #7c7978;
+  z-index: -2;
+}
+
+main .list figure figcaption .btn:hover {
+  z-index: 1;
+  background: transparent;
+}
+
+main .list figure figcaption .btn:hover:after, main .list figure figcaption .btn:hover:before {
+  width: 100%;
+}
+
+main .list figure figcaption .btn:before {
+  transition: 0.3s;
+  background: black;
+  z-index: -1;
+}
+
+footer {
+  width: 100%;
+  height: 400px;
+}
+
+footer .footer_search {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 60px;
+}
+
+footer .footer_search #search {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #aaaaaa;
+}
+
+footer .footer_search #search::-webkit-input-placeholder {
+  padding-left: 10px;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+footer .footer_search .search_image {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 5px;
+  top: 67px;
+  z-index: 5;
+  background-repeat: no-repeat;
+  /*设置图片不重复*/
+  background-position: 0px 0px;
+}
+
+footer .footer_center {
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer .footer_center section h5 {
+  font-size: 18px;
+  padding: 25px 0 20px 0;
+  color: #525252;
+  font-weight: 500;
+}
+
+footer .footer_center .footer_one {
+  width: 100%;
+}
+
+footer .footer_center .footer_one a {
+  display: inline;
+  padding-right: 10px;
+  color: #5c5c5c;
+  font-size: 14px;
+}
+
+footer .footer_center .footer_two {
+  width: 100%;
+  height: 75px;
+  text-align: center;
+  line-height: 75px;
+  border-top: 1px solid #dddddd;
+  margin-top: 20px;
+}
+
+footer .footer_center .footer_two p {
+  font-size: 14px;
+  color: dimgrey;
+}
