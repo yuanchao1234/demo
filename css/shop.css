@@ -144,16 +144,16 @@ main .list .figure figure figcaption p {
 }
 
 main .list .figure figure figcaption .btn {
+  border: 0px;
   position: relative;
   width: 100px;
   height: 38px;
   padding: 10px;
   color: #fff;
-  background-color: #7c7978;
+  background-color: #a6b9c1;
   cursor: pointer;
   border: none;
   margin-left: 10px;
-  transition: 0.3s;
 }
 
 main .list .figure figure figcaption .btn:after, main .list .figure figure figcaption .btn:before {
@@ -163,7 +163,7 @@ main .list .figure figure figcaption .btn:after, main .list .figure figure figca
   top: 0;
   width: 0;
   height: 100%;
-  background: #7c7978;
+  background: #a6b9c1;
   z-index: -2;
 }
 
@@ -178,7 +178,7 @@ main .list .figure figure figcaption .btn:hover:after, main .list .figure figure
 
 main .list .figure figure figcaption .btn:before {
   transition: 0.3s;
-  background: black;
+  background: #008cc7;
   z-index: -1;
 }
 
