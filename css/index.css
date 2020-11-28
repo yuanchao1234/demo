@@ -1,30 +1,32 @@
 @charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
 header {
   width: 100%;
-  height: 832px;
   background: #fff;
 }
 
 header .nav {
-  width: 100%;
   height: 132px;
   margin: 0 auto;
+  display: flex;
 }
 
 header .nav h1 {
-  float: left;
   padding: 0 30px;
 }
 
 header .nav ul {
   width: 700px;
   height: 132px;
-  float: left;
   line-height: 132px;
+  display: flex;
 }
 
 header .nav ul li {
-  float: left;
   padding: 0 30px;
 }
 
@@ -49,90 +51,67 @@ header .nav .search h2 {
   padding: 51px;
 }
 
-header .banner {
-  position: relative;
-  width: 100%;
-  height: 700px;
+header .banner .swiper-container {
+  height: 800px !important;
 }
 
-header .banner:hover > span {
-  display: block;
-}
-
-header .banner img {
-  width: 100%;
-  height: 700px;
-  display: block;
-}
-
-header .banner ul {
-  position: absolute;
+header .banner .swiper-container .swiper-wrapper .swiper-slide {
   overflow: hidden;
 }
 
-header .banner ul li {
-  float: left;
-  position: absolute;
-}
-
-header .banner ul li img {
-  display: block;
+header .banner .swiper-container .swiper-wrapper .swiper-slide img {
   width: 100%;
-  height: 700px;
 }
 
-header .banner .page {
+header .banner .swiper-container .pagination {
   position: absolute;
-  right: 42%;
-  bottom: 0;
-  padding: 10px;
-}
-
-header .banner .page span {
-  display: inline-block;
-  margin: 0 10px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999999;
+  bottom: 20px;
+  width: 100%;
+  height: 20px;
   text-align: center;
-  color: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(102, 101, 101, 0.5);
 }
 
-header .banner .page span:active {
-  background-color: rgba(255, 0, 0, 0.8);
+header .banner .swiper-container .pagination .swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #555;
+  margin: 0 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
 }
 
-header .banner > span {
-  display: none;
+header .banner .swiper-container .pagination .swiper-active-switch {
+  background: #fff;
+}
+
+header .banner .swiper-container .swiper-button-prev,
+header .banner .swiper-container .swiper-button-next {
   position: absolute;
-  left: 0;
+  z-index: 999999;
+  width: 17px;
+  height: 30px;
   top: 50%;
-  transform: translate(0, -50%);
-  padding: 30px 16px;
-  background-color: rgba(102, 101, 101, 0.5);
-  color: #fff;
+  transform: translateY(-50%);
 }
 
-header .banner > span:hover {
-  background-color: rgba(63, 63, 63, 0.8);
+header .banner .swiper-container .swiper-button-prev {
+  left: 10px;
+  background: url(../images/arrows.png) no-repeat left top;
 }
 
-header .banner .btn-next {
-  left: auto;
-  right: 0;
-}
-
-main {
-  width: 100%;
+header .banner .swiper-container .swiper-button-next {
+  right: 10px;
+  background: url(../images/arrows.png) no-repeat left bottom;
 }
 
 main .order {
-  width: 1490px;
+  width: 1150px;
   height: 535px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 main .order .order_top {
@@ -164,13 +143,12 @@ main .order .order_bottom {
 }
 
 main .order .order_bottom .bottom_center {
-  width: 80%;
+  display: flex;
   margin: 0 auto;
 }
 
 main .order .order_bottom figure {
   width: 25%;
-  float: left;
   text-align: center;
 }
 
@@ -195,19 +173,23 @@ main .order .order_bottom figure figcaption p {
   font-family: "微软雅黑";
 }
 
-main .theme {
+main .main-theme {
   width: 100%;
   height: 750px;
   background-color: #f7f7f7;
 }
 
-main .theme .theme_top {
-  width: 1490px;
+main .main-theme .theme {
+  width: 1150px;
+  margin: auto;
+}
+
+main .main-theme .theme .theme_top {
   height: 205px;
   margin: 0 auto;
 }
 
-main .theme .theme_top h3 {
+main .main-theme .theme .theme_top h3 {
   font-size: 30px;
   color: #1b252e;
   font-weight: bolder;
@@ -216,35 +198,37 @@ main .theme .theme_top h3 {
   text-align: center;
 }
 
-main .theme .theme_top p {
+main .main-theme .theme .theme_top p {
   text-align: center;
 }
 
-main .theme .theme_top p:nth-child(2) {
+main .main-theme .theme .theme_top p:nth-child(2) {
   font-size: 16px;
   color: darkgray;
 }
 
-main .theme .theme_bottom {
+main .main-theme .theme .theme_bottom {
   width: 100%;
   height: 545px;
 }
 
-main .theme .theme_bottom .bottom_center {
-  width: 82%;
+main .main-theme .theme .theme_bottom .bottom_center {
+  display: flex;
   margin: 0 auto;
 }
 
-main .theme .theme_bottom figure {
-  width: 380px;
+main .main-theme .theme .theme_bottom .bottom_center .theme_bottom-div {
+  width: 33.3%;
+}
+
+main .main-theme .theme .theme_bottom .bottom_center .theme_bottom-div figure {
   height: 300px;
-  border: 1px solid white;
-  float: left;
+  border: 1px solid #f7f7f7;
   margin: 0 15px;
   overflow: hidden;
 }
 
-main .theme .theme_bottom figure img {
+main .main-theme .theme .theme_bottom .bottom_center .theme_bottom-div figure img {
   width: 364px;
   height: 288px;
   margin: 0 auto;
@@ -252,43 +236,41 @@ main .theme .theme_bottom figure img {
   transition: 0.5s;
 }
 
-main .theme .theme_bottom figure img:hover {
+main .main-theme .theme .theme_bottom .bottom_center .theme_bottom-div figure img:hover {
   transform: scale(1.1);
 }
 
-main .theme .theme_bottom figcaption {
-  width: 380px;
+main .main-theme .theme .theme_bottom .bottom_center .theme_bottom-div figcaption {
   height: 242px;
   float: left;
   margin: 0 16px;
 }
 
-main .theme .theme_bottom figcaption h4 {
+main .main-theme .theme .theme_bottom .bottom_center .theme_bottom-div figcaption h4 {
   font-size: 18px;
   color: black;
   padding-top: 30px;
   font-weight: bolder;
 }
 
-main .theme .theme_bottom figcaption p {
+main .main-theme .theme .theme_bottom .bottom_center .theme_bottom-div figcaption p {
   font-size: 16px;
   color: #5e5d5d;
   line-height: 50px;
   font-family: "微软雅黑";
 }
 
-main .theme .theme_bottom figcaption span {
+main .main-theme .theme .theme_bottom .bottom_center .theme_bottom-div figcaption span {
   font-weight: bolder;
   color: rgba(255, 0, 0, 0.8);
 }
 
 main .shop {
-  width: 100%;
-  height: 750px;
+  width: 1150px;
+  margin: auto;
 }
 
 main .shop .shop_top {
-  width: 1490px;
   height: 205px;
   margin: 0 auto;
 }
@@ -317,20 +299,22 @@ main .shop .shop_bottom {
 }
 
 main .shop .shop_bottom .bottom_center {
-  width: 82%;
+  display: flex;
   margin: 0 auto;
 }
 
-main .shop .shop_bottom figure {
-  width: 380px;
+main .shop .shop_bottom .bottom_center .shop_bottom-div {
+  width: 33.3%;
+}
+
+main .shop .shop_bottom .bottom_center .shop_bottom-div figure {
   height: 300px;
   border: 1px solid white;
-  float: left;
   margin: 0 15px;
   overflow: hidden;
 }
 
-main .shop .shop_bottom figure img {
+main .shop .shop_bottom .bottom_center .shop_bottom-div figure img {
   width: 364px;
   height: 288px;
   margin: 0 auto;
@@ -338,49 +322,51 @@ main .shop .shop_bottom figure img {
   transition: 0.5s;
 }
 
-main .shop .shop_bottom figure img:hover {
+main .shop .shop_bottom .bottom_center .shop_bottom-div figure img:hover {
   transform: scale(1.1);
 }
 
-main .shop .shop_bottom figcaption {
-  width: 380px;
+main .shop .shop_bottom .bottom_center .shop_bottom-div figcaption {
   height: 242px;
   float: left;
   margin: 0 16px;
 }
 
-main .shop .shop_bottom figcaption h4 {
+main .shop .shop_bottom .bottom_center .shop_bottom-div figcaption h4 {
   font-size: 18px;
   color: black;
   padding-top: 30px;
   font-weight: bolder;
 }
 
-main .shop .shop_bottom figcaption p {
+main .shop .shop_bottom .bottom_center .shop_bottom-div figcaption p {
   font-size: 16px;
   color: #5e5d5d;
   line-height: 30px;
   font-family: "微软雅黑";
 }
 
-main .shop .shop_bottom figcaption span {
+main .shop .shop_bottom .bottom_center .shop_bottom-div figcaption span {
   font-weight: bolder;
   color: rgba(255, 0, 0, 0.8);
 }
 
-main .case {
-  width: 100%;
+main .main-case {
   height: 750px;
   background-color: #f7f7f7;
 }
 
-main .case .case_top {
-  width: 1490px;
+main .main-case .case {
+  width: 1150px;
+  margin: auto;
+}
+
+main .main-case .case .case_top {
   height: 205px;
   margin: 0 auto;
 }
 
-main .case .case_top h3 {
+main .main-case .case .case_top h3 {
   font-size: 30px;
   color: #1b252e;
   font-weight: bolder;
@@ -389,37 +375,36 @@ main .case .case_top h3 {
   text-align: center;
 }
 
-main .case .case_top p {
+main .main-case .case .case_top p {
   text-align: center;
 }
 
-main .case .case_top p:nth-child(2) {
+main .main-case .case .case_top p:nth-child(2) {
   font-size: 16px;
   color: darkgray;
 }
 
-main .case .case_bottom {
+main .main-case .case .case_bottom {
   width: 100%;
   height: 545px;
 }
 
-main .case .case_bottom .bottom_center {
-  width: 80%;
+main .main-case .case .case_bottom .bottom_center {
+  display: flex;
   margin: 0 auto;
 }
 
-main .case .case_bottom figure {
+main .main-case .case .case_bottom .bottom_center figure {
   width: 33.3%;
-  float: left;
   text-align: center;
   transition: 0.5s;
 }
 
-main .case .case_bottom figure:hover {
+main .main-case .case .case_bottom .bottom_center figure:hover {
   transform: translateY(-30px);
 }
 
-main .case .case_bottom figure img {
+main .main-case .case .case_bottom .bottom_center figure img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -427,14 +412,14 @@ main .case .case_bottom figure img {
   padding: 50px 0;
 }
 
-main .case .case_bottom figure figcaption h4 {
+main .main-case .case .case_bottom .bottom_center figure figcaption h4 {
   font-size: 20px;
   color: #009194;
   line-height: 60px;
   font-weight: border;
 }
 
-main .case .case_bottom figure figcaption p {
+main .main-case .case .case_bottom .bottom_center figure figcaption p {
   width: 280px;
   font-size: 13px;
   margin: 0 auto;

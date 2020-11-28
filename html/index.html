@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../images/title_logo.jpg" type="image/x-icon" />
     <title>北海旅游网</title>
+    <link rel="stylesheet" href="../css/idangerous.swiper.css">
+    <link rel="stylesheet" href="../css/idangerous.swiper.3dflow.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/common.css">
 </head>
@@ -24,7 +26,7 @@
                 <li><a href="theme.html">主题游</a></li>
                 <li><a href="shop.html">旅游商城</a></li>
                 <li><a href="message.html">北海资讯</a></li>
-                <li><a href="about.html">关于我</a></li>
+                <li><a href="about.html">关于我们</a></li>
             </ul>
             <article class="search">
                 <h2>
@@ -33,21 +35,29 @@
             </article>
         </section>
         <!--轮播图-->
-        <section class="banner" id="box1">
-            <ul>
-                <!-- <li data-index="0"><img src="../images/lunbo1.jpg" alt=""></li>
-                <li data-index="1"><img src="../images/lunbo2.jpg" alt=""></li>
-                <li data-index="2"><img src="../images/lunbo3.jpg" alt=""></li>
-                <li data-index="3"><img src="../images/lunbo4.jpg" alt=""></li> -->
-            </ul>
-            <article class="page">
-                <!-- <span class="active">1</span>
-                <span class="">2</span>
-                <span class="">3</span>
-                <span>4</span> -->
-            </article>
-            <span class="btn-prev">&lt;</span>
-            <span class="btn-next">&gt;</span>
+        <section class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../images/theme_nature.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/theme_aerial.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/theme_fimaly.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/message_banner.jpg" alt="">
+                    </div>
+                    <!-- <div class="swiper-slide">
+                        <img src="../images//lunbo4.jpg" alt="">
+                    </div> -->
+                </div>
+                <div class="pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </section>
     </header>
     <!--主体内容-->
@@ -94,41 +104,49 @@
         </section>
 
         <!-- 主题游 -->
-        <section class="theme">
-            <article class="theme_top">
-                <h3>主题小团</h3>
-                <p>Theme tour</p>
-                <p>_______</p>
-            </article>
-            <article class="theme_bottom">
-                <article class="bottom_center">
-                    <figure>
-                        <img src="../images/theme1.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="../images/theme2.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="../images/theme3.jpg" alt="">
-                    </figure>
-                    <figcaption>
-                        <h4>北海涠洲岛专享之旅</h4>
-                        <p>鳄鱼山、滴水丹屏、石螺口、天主教堂、五彩滩等...</p>
-                        <span>￥1000</span>
-                    </figcaption>
-                    <figcaption>
-                        <h4>北海城区两日游</h4>
-                        <p>北海银滩、北部湾广场、百年老街、侨港风情街等...</p>
-                        <span>￥1000</span>
-                    </figcaption>
-                    <figcaption>
-                        <h4>德天大瀑布游山之旅</h4>
-                        <p>亚洲第一、世界第四大跨国瀑布，为中国国家AAAAA级旅游区</p>
-                        <span>￥1000</span>
-                    </figcaption>
+        <div class="main-theme">
+            <section class="theme">
+                <article class="theme_top">
+                    <h3>主题小团</h3>
+                    <p>Theme tour</p>
+                    <p>_______</p>
                 </article>
-            </article>
-        </section>
+                <article class="theme_bottom">
+                    <article class="bottom_center">
+                        <div class="theme_bottom-div">
+                            <figure>
+                                <img src="../images/theme1.jpg" alt="">
+                            </figure>
+                            <figcaption>
+                                <h4>北海涠洲岛专享之旅</h4>
+                                <p>鳄鱼山、滴水丹屏、石螺口、天主教堂、五彩滩等...</p>
+                                <span>￥1000</span>
+                            </figcaption>
+                        </div>
+                        <div class="theme_bottom-div">
+                            <figure>
+                                <img src="../images/theme2.jpg" alt="">
+                            </figure>
+                            <figcaption>
+                                <h4>北海城区两日游</h4>
+                                <p>北海银滩、北部湾广场、百年老街、侨港风情街等...</p>
+                                <span>￥1000</span>
+                            </figcaption>
+                        </div>
+                        <div class="theme_bottom-div">
+                            <figure>
+                                <img src="../images/theme3.jpg" alt="">
+                            </figure>
+                            <figcaption>
+                                <h4>德天大瀑布游山之旅</h4>
+                                <p>亚洲第一、世界第四大跨国瀑布，为中国国家AAAAA级旅游区</p>
+                                <span>￥1000</span>
+                            </figcaption>
+                        </div>
+                    </article>
+                </article>
+            </section>
+        </div>
 
         <!-- 旅游商城 -->
         <section class="shop">
@@ -139,67 +157,75 @@
             </article>
             <article class="shop_bottom">
                 <article class="bottom_center">
-                    <figure>
-                        <img src="../images/shop1.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="../images/shop2.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="../images/shop3.jpg" alt="">
-                    </figure>
-                    <figcaption>
-                        <h4>北部湾游船出海、海钓3小时</h4>
-                        <p>享受炫酷海钓快感，现场海钓海鲜BBQ，胃与海洋的美味邂逅</p>
-                        <span>￥1000</span>
-                    </figcaption>
-                    <figcaption>
-                        <h4>北海海底世界</h4>
-                        <p>大型综合性海洋馆，海洋生物科普教育，海洋生物表演</p>
-                        <span>￥118</span>
-                    </figcaption>
-                    <figcaption>
-                        <h4>北海环岛游（南万码头）</h4>
-                        <p>缓缓行驶于波光粼粼的海面上，饱览海滨旖旎风光的游人吹着海风，踏着海浪，品着海鲜，享受疍族独一无二的渔家风情。 </p>
-                        <span>￥110</span>
-                    </figcaption>
+                    <div class="shop_bottom-div">
+                        <figure>
+                            <img src="../images/shop1.jpg" alt="">
+                        </figure>
+                        <figcaption>
+                            <h4>北部湾游船出海、海钓3小时</h4>
+                            <p>享受炫酷海钓快感，现场海钓海鲜BBQ，胃与海洋的美味邂逅</p>
+                            <span>￥1000</span>
+                        </figcaption>
+                    </div>
+                    <div class="shop_bottom-div">
+                        <figure>
+                            <img src="../images/shop2.jpg" alt="">
+                        </figure>
+                        <figcaption>
+                            <h4>北海海底世界</h4>
+                            <p>大型综合性海洋馆，海洋生物科普教育，海洋生物表演</p>
+                            <span>￥118</span>
+                        </figcaption>
+                    </div>
+                    <div class="shop_bottom-div">
+                        <figure>
+                            <img src="../images/shop3.jpg" alt="">
+                        </figure>
+                        <figcaption>
+                            <h4>北海环岛游（南万码头）</h4>
+                            <p>缓缓行驶于波光粼粼的海面上，饱览海滨旖旎风光的游人吹着海风，踏着海浪，品着海鲜，享受疍族独一无二的渔家风情。 </p>
+                            <span>￥110</span>
+                        </figcaption>
+                    </div>
                 </article>
             </article>
         </section>
 
         <!-- 客户案例 -->
-        <section class="case">
-            <article class="case_top">
-                <h3>客户案例</h3>
-                <p>Customer Case</p>
-                <p>_______</p>
-            </article>
-            <article class="case_bottom">
-                <article class="bottom_center">
-                    <figure>
-                        <img src="../images/case1.jpg" alt="">
-                        <figcaption>
-                            <h4>雯姐一家的北海之行</h4>
-                            <p>‘其实，这是我们第二次来北海了，就是想体验些和上次不一样的活动，还好我们的旅行规划师帮我们设计了第一无二的行程。向导人很好很热情，还为我们拍照和制作视频，留下了很多美好的回忆’</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/case2.jpg" alt="">
-                        <figcaption>
-                            <h4>高先生两家庭北海之旅</h4>
-                            <p>‘行程安排还是很满意的，出行指南做的很用心；让我们感受到了北海人生活的节奏，同时深度了解了北海的历史与文化，总体来说我们是相当满意的’</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/case3.jpg" alt="">
-                        <figcaption>
-                            <h4>陈女士两人的涠洲岛甜蜜之旅</h4>
-                            <p>‘行程安排还是很满意的，出行指南做的很用心；让我们感受到了北海人生活的节奏，同时深度了解了北海的历史与文化，总体来说我们是相当满意的’</p>
-                        </figcaption>
-                    </figure>
+        <div class="main-case">
+            <section class="case">
+                <article class="case_top">
+                    <h3>客户案例</h3>
+                    <p>Customer Case</p>
+                    <p>_______</p>
                 </article>
-            </article>
-        </section>
+                <article class="case_bottom">
+                    <article class="bottom_center">
+                        <figure>
+                            <img src="../images/case1.jpg" alt="">
+                            <figcaption>
+                                <h4>雯姐一家的北海之行</h4>
+                                <p>‘其实，这是我们第二次来北海了，就是想体验些和上次不一样的活动，还好我们的旅行规划师帮我们设计了第一无二的行程。向导人很好很热情，还为我们拍照和制作视频，留下了很多美好的回忆’</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../images/case2.jpg" alt="">
+                            <figcaption>
+                                <h4>高先生两家庭北海之旅</h4>
+                                <p>‘行程安排还是很满意的，出行指南做的很用心；让我们感受到了北海人生活的节奏，同时深度了解了北海的历史与文化，总体来说我们是相当满意的’</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../images/case3.jpg" alt="">
+                            <figcaption>
+                                <h4>陈女士两人的涠洲岛甜蜜之旅</h4>
+                                <p>‘行程安排还是很满意的，出行指南做的很用心；让我们感受到了北海人生活的节奏，同时深度了解了北海的历史与文化，总体来说我们是相当满意的’</p>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </article>
+            </section>
+        </div>
     </main>
     <!--底部内容-->
     <footer>
@@ -240,19 +266,25 @@
         </section>
     </footer>
 </body>
-
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/idangerous.swiper.min.js"></script>
+<script src="../js/idangerous.swiper.3dflow.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/index.js"></script>
 <script src="../js/lunbo.js"></script>
 <script>
-    lunbo({
-        id: '#box1', //必选参数
-        iw: 1519,
-        ih: 700,
-        speed: 2,
-        btns: true, //true：显示左右按钮，默认是不显示的
-        imglist: ['../images/lunbo1.jpg', '../images/lunbo2.jpg', '../images/lunbo3.jpg', '../images/lunbo4.jpg'] //必选参数
+    var mySwiper = $('.banner .swiper-container').swiper({
+        autoplay: 5000, // 可选选项，自动滑动
+        loop: true, // 可选选项，开启循环
+        pagination: '.pagination',
+        paginationClickable: true,// 值为true时，点击分页器的指示点时会发生Swiper。
     });
+    $('.swiper-button-prev').click(function () {
+        mySwiper.swipePrev();
+    })
+    $('.swiper-button-next').click(function () {
+        mySwiper.swipeNext();
+    })
 </script>
 
 </html>

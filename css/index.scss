@@ -1,24 +1,28 @@
 //头部内容
+*{
+    padding: 0;
+    margin: 0;
+}
 header{
     width: 100%;
-    height: 832px;
     background: #fff;
     .nav{
-        width: 100%;
         height: 132px;
         margin: 0 auto;
+        display: flex;
         h1{
-            float: left;
+            // float: left;
             padding: 0 30px;
         }
         ul{
             width: 700px;
             height: 132px;
-            float: left;
+            // float: left;
             line-height: 132px;
+            display: flex;
             // background-color: blue;
             li{
-                float: left;
+                // float: left;
                 padding: 0 30px;
             }
             a{
@@ -42,67 +46,56 @@ header{
         }
     }
     .banner{
-        position: relative;
-        width: 100%;
-        height: 700px;
-        &:hover>span{
-            display: block;
-        }
-        img{
-            width: 100%;
-            height: 700px;
-            display: block;
-        }
-        ul{
-            position: absolute;
-            overflow: hidden;
-            li{
-                float: left;
+        .swiper-container{
+            height: 800px !important;
+            .swiper-wrapper{
+                .swiper-slide {
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .pagination {
                 position: absolute;
-                img{
-                    display: block;
-                    width: 100%;
-                    height: 700px;
-                }
-            }
-        }
-        .page{
-            position: absolute;
-            right: 42%;
-            bottom: 0;
-            padding: 10px;
-            span{
-                display: inline-block;
-                margin: 0 10px;
-                width: 30px;
-                height: 30px;
-                line-height: 30px;
-                background-color: rgba(0, 0, 0, .6);
+                z-index: 9999999;
+                bottom: 20px;
+                width: 100%;
+                height: 20px;
                 text-align: center;
-                color: #fff;
-                border-radius: 50%;
-                box-shadow: 0 0 10px rgba(102, 101, 101, .5);
-                &:active{
-                    background-color: rgba(255, 0, 0, .8)
-                }
+                .swiper-pagination-switch {
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 8px;
+                    background: #555;
+                    margin: 0 5px;
+                    opacity: 0.8;
+                    border: 1px solid #fff;
+                    cursor: pointer;
+                    }
+                    .swiper-active-switch {
+                    background: #fff;
+                    }
             }
-        }
-        &>span{
-            display: none;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translate(0, -50%);
-            padding: 30px 16px;
-            background-color: rgba(102, 101, 101, 0.5);
-            color: #fff;
-            &:hover{
-                background-color: rgba(63, 63, 63, 0.8)
+            .swiper-button-prev,
+            .swiper-button-next {
+                position: absolute;
+                z-index: 999999;
+                width: 17px;
+                height: 30px;
+                top: 50%;
+                transform: translateY(-50%);
             }
-        }
-        .btn-next{
-            left: auto;
-            right: 0;
+            .swiper-button-prev{
+                left: 10px;
+                background: url(../images/arrows.png) no-repeat left top;
+                
+            }
+            .swiper-button-next{
+                right: 10px;
+                background: url(../images/arrows.png) no-repeat left bottom;
+            }
         }
     }
 }
@@ -110,13 +103,11 @@ header{
 
 //主体内容
 main{
-    width: 100%;
-
     //私人定制
     .order{
-        width: 1490px;
+        width: 1150px;
         height: 535px;
-        margin: 0 auto;
+        margin: auto;
         .order_top{
             width: 100%;
             height: 205px;
@@ -142,12 +133,11 @@ main{
             height: 330px;
             // background-color: rgb(60, 20, 124);
             .bottom_center{
-                width: 80%;
+                display: flex;
                 margin: 0 auto;
             }
             figure{
                 width: 25%;
-                float: left;
                 text-align: center;
                 img{
                     margin: 0 auto;
@@ -174,89 +164,94 @@ main{
     }
 
     //主题游
-    .theme{
+    .main-theme{
         width: 100%;
         height: 750px;
         background-color: rgb(247, 247, 247);
-        .theme_top{
-            width: 1490px;
-            height: 205px;
-            margin: 0 auto;
-            // background-color: firebrick;
-            h3{
-                font-size: 30px;
-                color: #1b252e;
-                font-weight: bolder;
-                line-height: 76px;
-                padding-top: 40px;
-                text-align: center;
-            }
-            p{
-                text-align: center;
-                &:nth-child(2){
-                    font-size: 16px;
-                    color: darkgray;
-                }
-            }
-        }
-        .theme_bottom{
-            width: 100%;
-            height: 545px;
-            // background-color: gainsboro;
-            .bottom_center{
-                width: 82%;
+        .theme{
+            width: 1150px;
+            margin: auto;
+            .theme_top{
+                height: 205px;
                 margin: 0 auto;
-            }
-            figure{
-                width: 380px;
-                height: 300px;
-                border: 1px solid white;
-                float: left;
-                margin: 0 15px;
-                overflow: hidden;
-                img{
-                    width: 364px;
-                    height: 288px;
-                    margin: 0 auto;
-                    padding: 6px;
-                    transition: 0.5s;
-                    &:hover{
-                        transform: scale(1.1);
+                // background-color: firebrick;
+                h3{
+                    font-size: 30px;
+                    color: #1b252e;
+                    font-weight: bolder;
+                    line-height: 76px;
+                    padding-top: 40px;
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                    &:nth-child(2){
+                        font-size: 16px;
+                        color: darkgray;
                     }
                 }
             }
-            figcaption{
-                width: 380px;
-                height: 242px;
-                float: left;
-                margin: 0 16px;
-                h4{
-                    font-size: 18px;
-                    color: rgb(0, 0, 0);
-                    padding-top: 30px;
-                    font-weight: bolder;
+            .theme_bottom{
+                width: 100%;
+                height: 545px;
+                // background-color: gainsboro;
+                .bottom_center{
+                    display: flex;
+                    margin: 0 auto;
+                    .theme_bottom-div{
+                        width: 33.3%;
+                        
+                        figure{
+                            height: 300px;
+                            border: 1px solid rgb(247, 247, 247);
+                            // float: left;
+                            margin: 0 15px;
+                            overflow: hidden;
+                            img{
+                                width: 364px;
+                                height: 288px;
+                                margin: 0 auto;
+                                padding: 6px;
+                                transition: 0.5s;
+                                &:hover{
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+                        figcaption{
+                            height: 242px;
+                            float: left;
+                            margin: 0 16px;
+                            h4{
+                                font-size: 18px;
+                                color: rgb(0, 0, 0);
+                                padding-top: 30px;
+                                font-weight: bolder;
+                            }
+                            p{
+                                // width: 240px;
+                                font-size: 16px;
+                                color: rgb(94, 93, 93);
+                                line-height: 50px;
+                                font-family: "微软雅黑";
+                            }
+                            span{
+                                font-weight: bolder;
+                                color: rgba(255, 0, 0, .8);
+                            }
+                        }
+                    }
                 }
-                p{
-                    // width: 240px;
-                    font-size: 16px;
-                    color: rgb(94, 93, 93);
-                    line-height: 50px;
-                    font-family: "微软雅黑";
-                }
-                span{
-                    font-weight: bolder;
-                    color: rgba(255, 0, 0, .8);
-                }
+
             }
         }
     }
 
     //旅游商城
     .shop{
-        width: 100%;
-        height: 750px;
+        width: 1150px;
+        margin: auto;
         .shop_top{
-            width: 1490px;
             height: 205px;
             margin: 0 auto;
             // background-color: firebrick;
@@ -281,119 +276,124 @@ main{
             height: 545px;
             // background-color: gainsboro;
             .bottom_center{
-                width: 82%;
+                display: flex;
                 margin: 0 auto;
-            }
-            figure{
-                width: 380px;
-                height: 300px;
-                border: 1px solid white;
-                float: left;
-                margin: 0 15px;
-                overflow: hidden;
-                img{
-                    width: 364px;
-                    height: 288px;
-                    margin: 0 auto;
-                    padding: 6px;
-                    transition: 0.5s;
-                    &:hover{
-                        transform: scale(1.1);
+                .shop_bottom-div{
+                    width: 33.3%;
+                    figure{
+                        height: 300px;
+                        border: 1px solid white;
+                        margin: 0 15px;
+                        overflow: hidden;
+                        img{
+                            width: 364px;
+                            height: 288px;
+                            margin: 0 auto;
+                            padding: 6px;
+                            transition: 0.5s;
+                            &:hover{
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                    figcaption{
+                        height: 242px;
+                        float: left;
+                        margin: 0 16px;
+                        h4{
+                            font-size: 18px;
+                            color: rgb(0, 0, 0);
+                            padding-top: 30px;
+                            font-weight: bolder;
+                        }
+                        p{
+                            // width: 240px;
+                            font-size: 16px;
+                            color: rgb(94, 93, 93);
+                            line-height: 30px;
+                            font-family: "微软雅黑";
+                        }
+                        span{
+                            font-weight: bolder;
+                            color: rgba(255, 0, 0, .8);
+                        }
                     }
                 }
             }
-            figcaption{
-                width: 380px;
-                height: 242px;
-                float: left;
-                margin: 0 16px;
-                h4{
-                    font-size: 18px;
-                    color: rgb(0, 0, 0);
-                    padding-top: 30px;
-                    font-weight: bolder;
-                }
-                p{
-                    // width: 240px;
-                    font-size: 16px;
-                    color: rgb(94, 93, 93);
-                    line-height: 30px;
-                    font-family: "微软雅黑";
-                }
-                span{
-                    font-weight: bolder;
-                    color: rgba(255, 0, 0, .8);
-                }
-            }
+
+
         }
     }
 
     //客户案例
-    .case{
-        width: 100%;
+    .main-case{
         height: 750px;
         background-color: rgb(247, 247, 247);
-        .case_top{
-            width: 1490px;
-            height: 205px;
-            margin: 0 auto;
-            h3{
-                font-size: 30px;
-                color: #1b252e;
-                font-weight: bolder;
-                line-height: 76px;
-                padding-top: 40px;
-                text-align: center;
-            }
-            p{
-                text-align: center;
-                &:nth-child(2){
-                    font-size: 16px;
-                    color: darkgray;
-                }
-            }
-        }
-        .case_bottom{
-            width: 100%;
-            height: 545px;
-            .bottom_center{
-                width: 80%;
+        .case{
+            width: 1150px;
+            margin: auto;
+            .case_top{
+                height: 205px;
                 margin: 0 auto;
+                h3{
+                    font-size: 30px;
+                    color: #1b252e;
+                    font-weight: bolder;
+                    line-height: 76px;
+                    padding-top: 40px;
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                    &:nth-child(2){
+                        font-size: 16px;
+                        color: darkgray;
+                    }
+                }
             }
-            figure{
-                width: 33.3%;
-                float: left;
-                text-align: center;
-                transition: 0.5s;
-                &:hover{
-                    transform: translateY(-30px);
-                }
-                img{
-                    width: 150px;
-                    height: 150px;
-                    border-radius: 50%;
+            .case_bottom{
+                width: 100%;
+                height: 545px;
+                .bottom_center{
+                    display: flex;
                     margin: 0 auto;
-                    padding: 50px 0;
-                }
-                figcaption{
-                    h4{
-                        font-size: 20px;
-                        color: rgb(0, 145, 148);
-                        line-height: 60px;
-                        font-weight: border;
+                    figure{
+                        width: 33.3%;
+                        text-align: center;
+                        transition: 0.5s;
+                        &:hover{
+                            transform: translateY(-30px);
+                        }
+                        img{
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 50%;
+                            margin: 0 auto;
+                            padding: 50px 0;
+                        }
+                        figcaption{
+                            h4{
+                                font-size: 20px;
+                                color: rgb(0, 145, 148);
+                                line-height: 60px;
+                                font-weight: border;
+                            }
+                            p{
+                                width: 280px;
+                                font-size: 13px;
+                                margin: 0 auto;
+                                color: rgb(94, 93, 93);
+                                line-height: 22px;
+                                font-family: "微软雅黑";
+                            }
+                        }
                     }
-                    p{
-                        width: 280px;
-                        font-size: 13px;
-                        margin: 0 auto;
-                        color: rgb(94, 93, 93);
-                        line-height: 22px;
-                        font-family: "微软雅黑";
-                    }
                 }
+
             }
         }
     }
+
 }
 
 //底部内容
