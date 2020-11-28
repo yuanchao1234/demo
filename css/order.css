@@ -6,43 +6,65 @@ header {
 }
 
 header .nav {
-  width: 100%;
   height: 132px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 header .nav h1 {
-  float: left;
   padding: 0 30px;
 }
 
 header .nav ul {
+  position: absolute;
+  left: 350px;
   width: 700px;
   height: 132px;
-  float: left;
   line-height: 132px;
+  display: flex;
 }
 
 header .nav ul li {
-  float: left;
-  padding: 0 30px;
+  box-sizing: border-box;
+  display: flex;
 }
 
-header .nav ul a {
+header .nav ul li a {
+  display: block;
+  width: 108px;
   color: #5e5c5b;
   font-size: 16px;
   font-weight: bolder;
   transition: 0.5s;
+  text-align: center;
+  position: relative;
 }
 
-header .nav ul a:hover {
-  color: #f13a3a;
+header .nav ul li a:hover {
+  color: #008cc7;
+}
+
+header .nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #008cc7;
+  position: absolute;
+  left: 50%;
+  bottom: 45px;
+  transform: translateX(-50%);
+  transition: width 1s;
+}
+
+header .nav ul li a:hover::after {
+  width: 100%;
 }
 
 header .nav .search {
   width: 132px;
   height: 132px;
-  float: right;
 }
 
 header .nav .search h2 {
@@ -91,12 +113,8 @@ header .banner .box .click {
   font-size: 16px;
 }
 
-main {
-  width: 100%;
-}
-
 main .one {
-  width: 80%;
+  width: 1150px;
   height: 800px;
   margin: 0 auto;
 }
@@ -119,14 +137,13 @@ main .one .one_title h2 {
 }
 
 main .one .one_content {
-  width: 100%;
   height: 620px;
+  display: flex;
 }
 
 main .one .one_content .one_content_image {
   width: 50%;
   height: 620px;
-  float: left;
 }
 
 main .one .one_content .one_content_image img {
@@ -160,7 +177,7 @@ main .one .one_content .one_content_text .one_content_text_1 p {
 }
 
 main .two {
-  width: 80%;
+  width: 1150px;
   height: 800px;
   margin: 0 auto;
 }
@@ -198,7 +215,7 @@ main .two .two_image img {
 }
 
 main .three {
-  width: 80%;
+  width: 1150px;
   height: 690px;
   margin: 0 auto;
 }
@@ -229,12 +246,12 @@ main .three .three_title p {
 main .three .three_route {
   width: 100%;
   height: 510px;
+  display: flex;
 }
 
 main .three .three_route figure {
   width: 380px;
   height: 500px;
-  float: left;
   border: 1px solid #bddefa;
   background-color: #ececec;
 }

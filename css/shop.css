@@ -6,43 +6,65 @@ header {
 }
 
 header .nav {
-  width: 100%;
   height: 132px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 header .nav h1 {
-  float: left;
   padding: 0 30px;
 }
 
 header .nav ul {
+  position: absolute;
+  left: 350px;
   width: 700px;
   height: 132px;
-  float: left;
   line-height: 132px;
+  display: flex;
 }
 
 header .nav ul li {
-  float: left;
-  padding: 0 30px;
+  box-sizing: border-box;
+  display: flex;
 }
 
-header .nav ul a {
+header .nav ul li a {
+  display: block;
+  width: 108px;
   color: #5e5c5b;
   font-size: 16px;
   font-weight: bolder;
   transition: 0.5s;
+  text-align: center;
+  position: relative;
 }
 
-header .nav ul a:hover {
-  color: #f13a3a;
+header .nav ul li a:hover {
+  color: #008cc7;
+}
+
+header .nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #008cc7;
+  position: absolute;
+  left: 50%;
+  bottom: 45px;
+  transform: translateX(-50%);
+  transition: width 1s;
+}
+
+header .nav ul li a:hover::after {
+  width: 100%;
 }
 
 header .nav .search {
   width: 132px;
   height: 132px;
-  float: right;
 }
 
 header .nav .search h2 {
@@ -90,27 +112,30 @@ main .nav ul li a {
 main .list {
   width: 80%;
   margin: 0 auto;
-  background-color: indigo;
 }
 
-main .list figure {
+main .list .figure {
+  width: 1215px;
+  display: flex;
+}
+
+main .list .figure figure {
   width: 25%;
   height: 400px;
-  float: left;
 }
 
-main .list figure img {
+main .list .figure figure img {
   width: 280px;
   height: 280px;
   padding: 10px;
 }
 
-main .list figure figcaption h4 {
+main .list .figure figure figcaption h4 {
   font-size: 16px;
   padding-left: 10px;
 }
 
-main .list figure figcaption p {
+main .list .figure figure figcaption p {
   font-size: 14px;
   line-height: 30px;
   color: red;
@@ -118,7 +143,7 @@ main .list figure figcaption p {
   padding-left: 10px;
 }
 
-main .list figure figcaption .btn {
+main .list .figure figure figcaption .btn {
   position: relative;
   width: 100px;
   height: 38px;
@@ -131,7 +156,7 @@ main .list figure figcaption .btn {
   transition: 0.3s;
 }
 
-main .list figure figcaption .btn:after, main .list figure figcaption .btn:before {
+main .list .figure figure figcaption .btn:after, main .list .figure figure figcaption .btn:before {
   content: '';
   position: absolute;
   left: 0;
@@ -142,16 +167,16 @@ main .list figure figcaption .btn:after, main .list figure figcaption .btn:befor
   z-index: -2;
 }
 
-main .list figure figcaption .btn:hover {
+main .list .figure figure figcaption .btn:hover {
   z-index: 1;
   background: transparent;
 }
 
-main .list figure figcaption .btn:hover:after, main .list figure figcaption .btn:hover:before {
+main .list .figure figure figcaption .btn:hover:after, main .list .figure figure figcaption .btn:hover:before {
   width: 100%;
 }
 
-main .list figure figcaption .btn:before {
+main .list .figure figure figcaption .btn:before {
   transition: 0.3s;
   background: black;
   z-index: -1;
