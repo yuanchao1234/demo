@@ -123,13 +123,17 @@ header .banner .swiper-container .swiper-button-next {
 }
 
 header .banner .swiper-container .swiper-button-prev {
-  left: 10px;
+  left: 30px;
   background: url(../images/arrows.png) no-repeat left top;
 }
 
 header .banner .swiper-container .swiper-button-next {
-  right: 10px;
+  right: 30px;
   background: url(../images/arrows.png) no-repeat left bottom;
+}
+
+.none {
+  display: none;
 }
 
 main .order {
