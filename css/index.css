@@ -75,10 +75,6 @@ header .nav .search h2 {
   padding: 51px;
 }
 
-header .banner .swiper-container {
-  height: 800px !important;
-}
-
 header .banner .swiper-container .swiper-wrapper .swiper-slide {
   overflow: hidden;
 }

@@ -49,7 +49,7 @@
                         <img src="../images/theme_fimaly.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../images/message_banner.jpg" alt="">
+                        <img  class="message_banner" src="../images/message_banner.jpg" alt="">
                     </div>
                     <!-- <div class="swiper-slide">
                         <img src="../images//lunbo4.jpg" alt="">
@@ -281,9 +281,10 @@
 <script src="../js/common.js"></script>
 <script src="../js/index.js"></script>
 <script src="../js/lunbo.js"></script>
+<!-- 控制轮播图 -->
 <script>
     var mySwiper = $('.banner .swiper-container').swiper({
-        autoplay: 5000, // 可选选项，自动滑动
+        autoplay: 3000, // 可选选项，自动滑动
         loop: true, // 可选选项，开启循环
         pagination: '.pagination',
         paginationClickable: true,// 值为true时，点击分页器的指示点时会发生Swiper。
@@ -294,7 +295,13 @@
     $('.swiper-button-next').click(function () {
         mySwiper.swipeNext();
     })
+    // 轮询，控制轮播图容器的高度
+    setInterval(()=>{
+        let height = parseInt($('.message_banner').css('height'))
+        $(".banner .swiper-container").css('height', height)
+    },100)
 </script>
+<!-- 控制动画 -->
 <script>
     let order = document.querySelector("main .order");
     let theme = document.querySelector("main .main-theme");
